@@ -1,0 +1,44 @@
+ALGORITHM Sentence 
+
+CONST Sentence : String := "Welcome to GoMyCode";
+
+VAR leng : integer := 0;
+    nbr_word: integer := 0;
+    nbr_vowls: integer := 0;
+
+Begin
+
+write("Give the sentence");
+Read(Sentence);
+
+For i:=0 to sentence.length DO
+   IF (Sentence[i] <> '')THEN
+      leng:= leng +1;
+END IF
+Write("The length of the sentence is" +leng);
+END FOR
+
+For(i:=0 to Sentence.length) THEN
+ IF (Sentence[i] ='' AND Sentence[i+1].isalpha() AND i>0)THEN
+      nbr_word := nbr_word + 1;
+END IF
+Write("The number of words in the sentence is" + nbr_word);
+END FOR
+
+For i:=0 to sentence.length DO
+   IF (Sentence[i] ='a') OR
+      (Sentence[i] ='e') OR
+      (Sentence[i] ='i') OR
+      (Sentence[i] ='o') OR
+      (Sentence[i] ='u') OR
+      (Sentence[i] ='y') THEN
+      nbr_vowls := nbr_vowls + 1;
+END IF
+Write("The Number of vowls in the sentence is" +nbr_vowls);
+END FOR
+
+END
+
+
+
+
